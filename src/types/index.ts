@@ -15,7 +15,7 @@ export interface Reservation {
 
 export interface Room {
     id: number
-    number: number
+    number: string
     room_type: number
     room_type_data: RoomType
     status: number

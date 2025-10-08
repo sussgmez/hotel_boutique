@@ -2,9 +2,10 @@ import type { Room } from "../types";
 
 interface Props {
     room: Room;
+    setRoom: React.Dispatch<React.SetStateAction<Room | undefined>>;
 }
 
-const RoomCard = ({ room }: Props) => {
+const RoomCard = ({ room, setRoom }: Props) => {
 
     let status_styles = "p-2 rounded-md border cursor-pointer shadow ";
     if (room.status == 1) {
@@ -18,7 +19,7 @@ const RoomCard = ({ room }: Props) => {
 
 
     return (
-        <div className={status_styles}>
+        <div className={status_styles} onClick={() => setRoom(room)}>
             <p className="text-sm font-medium">{room.number} - {room.room_type_data.name}</p>
             <p className="text-sm">{room.status_display}</p>
             <p>-</p>

@@ -9,7 +9,7 @@ export const apiClient = axios.create({
 })
 
 
-export const getRooms = async (): Promise<Room[]> => {
-    const { data } = await apiClient.get<Room[]>('/rooms?number=201');
+export const getRooms = async (number: string = ""): Promise<Room[]> => {
+    const { data } = await apiClient.get<Room[]>(`/rooms?number=${number}`);
     return data;
 }

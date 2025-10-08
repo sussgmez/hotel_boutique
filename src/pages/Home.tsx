@@ -11,7 +11,6 @@ const Home = () => {
             </header>
             <div className="py-8 px-4  max-w-sm m-auto sm:max-w-2xl lg:max-w-5xl xl:max-w-screen xl:p-8">
                 <p className="text-2xl mb-3 font-semibold text-gray-800">Habitaciones</p>
-
                 <RoomList />
             </div>
         </>
