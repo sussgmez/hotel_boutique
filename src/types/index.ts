@@ -24,3 +24,7 @@ export interface Room {
     active_reservation: Reservation | undefined
 }
 
+export interface PageContextType {
+    rooms: Room[]
+}
+
